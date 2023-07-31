@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Flag Website</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Anton&family=Ewert&family=Roboto:wght@700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      body {        
+        min-width: 100vw;
+        display: grid;
+        place-content: center;
+        background: skyblue;
+        margin: 0;
+      }
+
+      .container {
+        min-width: 100vw;
+        background: red;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        gap: 30px;
+        border-radius: 30px;
+        padding: 20px;
+        margin-top: 20px;
+      }
+
+      #India {
+        height: 400px;
+        width: 220px;
+        background-color: skyblue;
+        border-radius: 10px;
+        overflow: hidden;
+        object-fit: contain;
+        display: block;
+        
+      }
+
+      #Germany {
+        height: 400px;
+        width: 220px;
+        background-color: skyblue;
+        border-radius: 10px;
+        overflow: hidden;
+        object-fit: contain;
+        display: block;
+      }
+
+      #US {
+        height: 400px;
+        width: 220px;
+        background-color: skyblue;
+        border-radius: 10px;
+        overflow: hidden;
+        object-fit: contain;
+        display: block;
+      }
+
+      #Brazil {
+        height: 400px;
+        width: 220px;
+        background-color: skyblue;
+        border-radius: 10px;
+        overflow: hidden;
+        object-fit: contain;
+        display: block;
+      }
+
+      #Iceland {
+        height: 400px;
+        width: 220px;
+        background-color: skyblue;
+        border-radius: 10px;
+        overflow: hidden;
+        object-fit: contain;
+        display: block;
+      }
+
+      h1 {
+        font-family: "Anton", sans-serif;
+        /* font-family: 'Ewert', cursive;
+            font-family: 'Roboto', sans-serif; */
+        padding-left: 10px;
+      }
+
+      p {
+        line-height: 50px;
+        padding-left: 10px;
+        padding-right: 5px;
+        font-family: "Roboto", sans-serif;
+      }
+
+      @media (max-width: 600px){
+        .container {
+        min-width: 100vw;
+        background: red;
+        display: flex; 
+        flex-direction: column;
+        gap: 20px;       
+        border-radius: 30px;
+        /* padding: 20px;
+        margin-top: 20px; */
+      }
+
+      #India {
+        height: 400px;
+        width: 220px;
+        margin: auto;
+        background-color: skyblue;
+        border-radius: 10px;
+        overflow: hidden;
+        object-fit: contain;
+        display: block;
+        
+      }
+
+      #Germany {
+        height: 400px;
+        width: 220px;
+        margin: auto;
+        background-color: skyblue;
+        border-radius: 10px;
+        overflow: hidden;
+        object-fit: contain;
+        display: block;
+      }
+
+      #US {
+        height: 400px;
+        width: 220px;
+        margin: auto;
+        background-color: skyblue;
+        border-radius: 10px;
+        overflow: hidden;
+        object-fit: contain;
+        display: block;
+      }
+
+      #Brazil {
+        height: 400px;
+        width: 220px;
+        margin: auto;
+        background-color: skyblue;
+        border-radius: 10px;
+        overflow: hidden;
+        object-fit: contain;
+        display: block;
+      }
+
+      #Iceland {
+        height: 400px;
+        width: 220px;
+        margin: auto;
+        background-color: skyblue;
+        border-radius: 10px;
+        overflow: hidden;
+        object-fit: contain;
+        display: block;
+      }
+
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div id="India">
+        <!-- <h1> Hello World</h1> -->
+      </div>
+
+      <div id="Germany"></div>
+
+      <div id="US"></div>
+
+      <div id="Brazil"></div>
+
+      <div id="Iceland"></div>
+    </div>
+    <script>
+      // India Section
+      var ind = document.getElementById("India");
+      var ind_flag = document.createElement("img");
+      ind_flag.setAttribute(
+        "src",
+        "https://upload.wikimedia.org/wikipedia/commons/7/7b/India_flag_300.png"
+      );
+      ind_flag.setAttribute("width", 220);
+      ind_flag.setAttribute("height", 150);
+      ind.append(ind_flag);
+
+      var ind_title = document.createElement("h1");
+      ind_title.innerText = "India";
+      ind.append(ind_title);
+
+      var ind_deets = document.createElement("p");
+      ind_deets.innerText = `Population: 1,394,975,829 \n Region: Asia \n Capital: New Delhi`;
+      ind.append(ind_deets);
+
+      // Germany section
+
+      var ger = document.getElementById("Germany");
+      var ger_flag = document.createElement("img");
+      ger_flag.setAttribute(
+        "src",
+        "https://upload.wikimedia.org/wikipedia/en/thumb/b/ba/Flag_of_Germany.svg/1200px-Flag_of_Germany.svg.png"
+      );
+      ger_flag.setAttribute("width", 220);
+      ger_flag.setAttribute("height", 150);
+      ger.append(ger_flag);
+
+      var ger_title = document.createElement("h1");
+      ger_title.innerText = "Germany";
+      ger.append(ger_title);
+
+      var ger_deets = document.createElement("p");
+      ger_deets.innerText = `Population: 81,770,900 \n Region: Europe \n Capital: Berlin`;
+      ger.append(ger_deets);
+
+      // United States section
+
+      var usa = document.getElementById("US");
+      var usa_flag = document.createElement("img");
+      usa_flag.setAttribute(
+        "src",
+        "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a4/Flag_of_the_United_States.svg/640px-Flag_of_the_United_States.svg.png"
+      );
+      usa_flag.setAttribute("width", 220);
+      usa_flag.setAttribute("height", 150);
+      usa.append(usa_flag);
+
+      var usa_title = document.createElement("h1");
+      usa_title.innerText = "United States";
+      usa.append(usa_title);
+
+      var usa_deets = document.createElement("p");
+      usa_deets.innerText = `Population: 323,947,000 \n Region: Americas \n Capital: Washington DC`;
+      usa.append(usa_deets);
+
+      // Brazil section
+
+      var bzl = document.getElementById("Brazil");
+      var bzl_flag = document.createElement("img");
+      bzl_flag.setAttribute(
+        "src",
+        "https://upload.wikimedia.org/wikipedia/commons/0/01/Brazil_flag_300.png"
+      );
+      bzl_flag.setAttribute("width", 220);
+      bzl_flag.setAttribute("height", 150);
+      bzl.append(bzl_flag);
+
+      var bzl_title = document.createElement("h1");
+      bzl_title.innerText = "Brazil";
+      bzl.append(bzl_title);
+
+      var bzl_deets = document.createElement("p");
+      bzl_deets.innerText = `Population: 206,135,893 \n Region: Americas \n Capital: Brasilia`;
+      bzl.append(bzl_deets);
+
+      // Iceland section
+
+      var ice = document.getElementById("Iceland");
+      var ice_flag = document.createElement("img");
+      ice_flag.setAttribute(
+        "src",
+        "https://upload.wikimedia.org/wikipedia/commons/thumb/c/ce/Flag_of_Iceland.svg/640px-Flag_of_Iceland.svg.png"
+      );
+      ice_flag.setAttribute("width", 220);
+      ice_flag.setAttribute("height", 147);
+      ice.append(ice_flag);
+
+      var ice_title = document.createElement("h1");
+      ice_title.innerText = "Iceland";
+      ice.append(ice_title);
+
+      var ice_deets = document.createElement("p");
+      ice_deets.innerText = `Population: 334,300 \n Region: Europe \n Capital: Reykjavik`;
+      ice.append(ice_deets);
+    </script>
+  </body>
+</html>
