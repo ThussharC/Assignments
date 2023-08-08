@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Slideshow</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Montserrat:wght@500&family=Roboto:wght@900&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        display: grid;
+        place-content: center;
+        min-height: 100vh;
+      }
+
+      h1 {
+        font-family: "Abril Fatface", cursive;
+        text-align: center;
+        font-size: 40px;
+        margin-top: 10px;
+        letter-spacing: 5px;
+      }
+      .container {
+        width: 75vw;
+        display: block;
+      }
+
+      .contents {
+        width: 100%;
+        object-fit: contain;
+      }
+      .but_img {
+        width: 50%;
+        height: 100%;
+        object-fit: contain;
+      }
+
+      #main_img {
+        width: 100%;
+        height: auto;
+        border-radius: 20px;
+        /* height: 700px; */
+      }
+
+      .left {
+        position: absolute;
+        top: 0%;
+        left: 5%;
+        /* transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%); */
+        font-size: 25px;
+        /* padding: 12px 24px; */
+        border: 20px;
+        /* cursor: pointer; */
+        border-radius: 10px;
+        width: 80px;
+        height: 100%;
+        text-align: center;
+        font-weight: 600;
+        background: url(./left_arrow.png);
+      }
+
+      .right {
+        width: 80px;
+        height: 100%;
+        text-align: center;
+        font-weight: 600;
+        font-size: 25px;
+        border: 20px;
+        position: absolute;
+        top: 0%;
+        right: 5%;
+        border-radius: 10px;
+        background: url(./right_arrow.png);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="contents">
+        <img id="main_img" />
+        <button class="left" onclick="moveImg('left')">
+          <img class="but_img" src="./left_arrow.png" />
+        </button>
+        <button class="right" onclick="moveImg('right')">
+          <img class="but_img" src="./right_arrow.png" />
+        </button>
+        <h1>Demon Slayer Slideshow</h1>
+      </div>
+    </div>
+    <script>
+      var imgArr = ["img_1.jpg", "img_2.jpg", "img_3.jpg", "img_4.jpg"];
+      var index = 0;
+      var image = document.getElementById("main_img");
+      image.src = imgArr[index];
+
+      function moveImg(direction) {
+        if (direction == "left") {
+          index--;
+        } else {
+          index++;
+          index %= imgArr.length;
+        }
+
+        if (index < 0) {
+          index = imgArr.length - 1;
+        }
+
+        image.src = imgArr[index];
+      }
+    </script>
+  </body>
+</html>
